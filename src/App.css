@@ -1,38 +1,83 @@
 .App {
+  width: 40%;
+  margin: 2em auto;
+  background-color: #394049;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.todo-header {
+  padding: 0.5em;
+  border-bottom: 1px solid #2c3035;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-header h1 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-todo {
+  padding: 1em;
+  margin: 0 2em;
+  border-bottom: 1px solid #2c3035;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-todo h2,
+.list-todo h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.form-control {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control label {
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-bottom: 0.4em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-control input {
+  border: 1px solid #222;
+  border-radius: 2px;
+  background: #2c3035;
+  padding: 0.5em;
+  color: #dfdfdf;
+}
+
+input[type="submit"] {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+  color: #eee;
+  display: block;
+  width: 100%;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 1em;
+  cursor: pointer;
+}
+
+body {
+  -webkit-animation: color-change-2x 2s linear infinite alternate both;
+  animation: color-change-2x 2s linear infinite alternate both;
+}
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #4568dc;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background: #b06ab3;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #4568dc;
+  }
+  100% {
+    background: #b06ab3;
   }
 }

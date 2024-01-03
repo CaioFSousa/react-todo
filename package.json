@@ -7,7 +7,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^3.0.4"
+    "web-vitals": "^3.0.4",
+    "react-icons": "^4.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +33,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "name": "workspace",
+  "description": "This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }
