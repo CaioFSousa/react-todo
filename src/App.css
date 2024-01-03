@@ -49,8 +49,7 @@
 }
 
 input[type="submit"] {
-  -webkit-animation: color-change-2x 2s linear infinite alternate both;
-  animation: color-change-2x 2s linear infinite alternate both;
+  background: #4568dc;
   color: #eee;
   display: block;
   width: 100%;
@@ -58,14 +57,19 @@ input[type="submit"] {
   border-radius: 4px;
   padding: 1em;
   cursor: pointer;
+  transition: all 1.5s;
+}
+
+input[type="submit"]:hover {
+  background: #b06ab3;
 }
 
 body {
-  -webkit-animation: color-change-2x 2s linear infinite alternate both;
-  animation: color-change-2x 2s linear infinite alternate both;
+  -webkit-animation: background-change-2x 2s linear infinite alternate both;
+  animation: background-change-2x 2s linear infinite alternate both;
 }
 
-@-webkit-keyframes color-change-2x {
+@-webkit-keyframes background-change-2x {
   0% {
     background: #4568dc;
   }
@@ -73,11 +77,50 @@ body {
     background: #b06ab3;
   }
 }
-@keyframes color-change-2x {
+@keyframes background-change-2x {
   0% {
     background: #4568dc;
   }
   100% {
     background: #b06ab3;
   }
+}
+
+.list-todo {
+  padding: 1em;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: #222;
+  border-radius: 4px;
+  margin-bottom: 0.4em;
+}
+
+.todo h3,
+.todo p {
+  margin: 0;
+}
+
+.todo h3 {
+  text-transform: capitalize;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.todo p {
+  font-size: 0.8em;
+}
+
+.actions span {
+  color: #4568dc;
+  transition: all 1.5s;
+  margin-right: 0.3em;
+  cursor: pointer;
+}
+
+.actions span:hover {
+  color: #b06ab3;
 }

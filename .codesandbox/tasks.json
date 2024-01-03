@@ -16,18 +16,15 @@
     },
     "build": {
       "name": "build",
-      "command": "pnpm build",
-      "runAtStart": false
+      "command": "pnpm build"
     },
     "test": {
       "name": "test",
-      "command": "pnpm test",
-      "runAtStart": false
+      "command": "pnpm test"
     },
     "eject": {
       "name": "eject",
-      "command": "pnpm eject",
-      "runAtStart": false
+      "command": "pnpm eject"
     }
   }
 }

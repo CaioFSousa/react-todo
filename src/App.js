@@ -17,10 +17,22 @@ function App() {
       done: false,
     };
     setTodos((oldState) => [...oldState, todo]);
-    console.log(todo);
 
     setTitle("");
     setTime("");
+  };
+
+  const handlerDone = (id) => {
+    const newTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, done: !todo.done } : { ...todo },
+    );
+
+    setTodos(newTodos);
+  };
+
+  const handlerDelete = (id) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
   };
 
   return (
@@ -46,7 +58,7 @@ function App() {
           <div className="form-control">
             <label htmlFor="time">Duration:</label>
             <input
-              type="time"
+              type="number"
               name="time"
               placeholder="Estimated time in hours"
               onChange={(e) => setTime(e.target.value)}
@@ -63,11 +75,16 @@ function App() {
         {todos.length === 0 && <p>You dont have any todo</p>}
         {todos.map((todo) => (
           <div className="todo" key={todo.id}>
-            <h3>{todo.title}</h3>
-            <p>Duration: {todo.time}</p>
+            <div>
+              <h3>{todo.title}</h3>
+              <p>Duration: {todo.time}</p>
+            </div>
             <div className="actions">
-              <span>
+              <span onClick={() => handlerDone(todo.id)}>
                 {!todo.done ? <BsBookmarkCheck /> : <BsBookmarkCheckFill />}
+              </span>
+              <span onClick={() => handlerDelete(todo.id)}>
+                <BsTrash />
               </span>
             </div>
           </div>
